@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shadow-dark:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 6px 6px 0 0 black;
+}
+
+.shadow-dark:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+}
+
+.outline-btn {
+  outline: 2px #181717 solid;
+  outline-offset: -3px;
+}
+
+.small-btn {
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  background-color: black;
+  color: white;
+}
+
+.small-btn::before {
+  width: 100%;
+  height: 130px;
+  position: absolute;
+  content: "";
+  pointer-events: none;
+  background-color: white;
+  border-radius: 80%;
+  left: -100%;
+  top: 0;
+  transition-duration: 0.3s;
+  mix-blend-mode: difference;
+}
+
+.small-btn:hover::before {
+  transition-duration: 0.3s;
+  transform: translate(100%, -50%);
+  border-radius: 0;
+}
+
+.small-btn:active {
+  transform: translate(5px, 5px);
+  transition-duration: 0.3s;
+}
+
+.link-underline {
+  border-bottom-width: 0px;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#ebf4f5, #b5c6e0);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease-in-out;
+}
+
+.underline-active {
+  border-bottom-width: 0px;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#ebf4f5, #b5c6e0);
+  background-size: 100% 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}
+
+.link-underline-black {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(90deg, #866ee7, #302b63);
+}
+
+.link-underline:hover {
+  background-size: 100% 3px;
+  background-position: 0 100%;
+}
+
+/* this is the text, when you hover on button */
+.sp {
+  background: linear-gradient(90deg, #866ee7, #ea60da, #302b63);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
