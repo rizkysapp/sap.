@@ -6,14 +6,13 @@ import Cart from "../Cart";
 import { BlogProps } from "@/types/Blog";
 import React from "react";
 
-const Blog: React.FC<BlogProps> = ({ title, date, desc, look, dateUp, srcImage, small }) => {
+const BlogCard: React.FC<BlogProps> = ({ title, date, desc, look, dateUp, srcImage, small }) => {
   return (
-    <div className={`p-4 ${small ? "md:w-1/3" : "w-1/2"}`}>
+    <div className={`${small ? "md:w-full" : "w-1/2"}`}>
       <Cart>
         <div
           className=" 
-            h-[30%]
-            w-full
+            relative
             object-cover 
             p-1
           "
@@ -21,6 +20,8 @@ const Blog: React.FC<BlogProps> = ({ title, date, desc, look, dateUp, srcImage, 
           <Image
             className="
               w-full 
+              h-auto
+              overflow-hidden
               rounded-t
             "
             src={`${srcImage}`}
@@ -74,7 +75,7 @@ const Blog: React.FC<BlogProps> = ({ title, date, desc, look, dateUp, srcImage, 
               "
             >
               <BsEye size={16} />
-              <span className="text-sm">{look}</span>
+              <span className="text-sm">{look} views</span>
             </div>
           </div>
           <h2
@@ -89,7 +90,7 @@ const Blog: React.FC<BlogProps> = ({ title, date, desc, look, dateUp, srcImage, 
           <p
             className={`
               mt-2 
-              h-16 
+              h-10 
               overflow-hidden 
               text-sm 
               font-normal
@@ -118,4 +119,4 @@ const Blog: React.FC<BlogProps> = ({ title, date, desc, look, dateUp, srcImage, 
   );
 };
 
-export default Blog;
+export default BlogCard;

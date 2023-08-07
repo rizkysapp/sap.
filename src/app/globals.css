@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 .shadow-dark:hover {
   transform: translateY(-4px) translateX(-2px);
   box-shadow: 6px 6px 0 0 black;
@@ -28,15 +39,15 @@
 }
 
 .small-btn::before {
-  width: 100%;
-  height: 130px;
+  width: 111%;
+  height: 170%;
   position: absolute;
   content: "";
   pointer-events: none;
   background-color: white;
-  border-radius: 80%;
-  left: -100%;
-  top: 0;
+  border-radius: 90%;
+  left: -120%;
+  top: 50;
   transition-duration: 0.3s;
   mix-blend-mode: difference;
 }
@@ -85,4 +96,61 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+
+.HoverCardContent {
+  animation-duration: 400ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.HoverCardArrow {
+  fill: white;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-start {
+  @apply flex justify-start items-center;
+}
+
+.page-h1 {
+  @apply text-4xl font-bold text-gray-900 pr-5 bg-gradient-to-r from-[#ece8e8] via-[#EAEAEA] to-white;
+}
+
+[data-fade] {
+  @apply translate-y-10 opacity-0 transition duration-300 ease-out motion-reduce:translate-y-0 motion-reduce:opacity-100;
+}
+.fade-in-start [data-fade] {
+  @apply translate-y-0 opacity-100;
+}
+.fade-in-start [data-fade="1"] {
+  transition-delay: 100ms;
+}
+.fade-in-start [data-fade="2"] {
+  transition-delay: 200ms;
+}
+.fade-in-start [data-fade="3"] {
+  transition-delay: 300ms;
+}
+.fade-in-start [data-fade="4"] {
+  transition-delay: 400ms;
+}
+.fade-in-start [data-fade="5"] {
+  transition-delay: 500ms;
+}
+.fade-in-start [data-fade="6"] {
+  transition-delay: 600ms;
+}
+.fade-in-start [data-fade="7"] {
+  transition-delay: 700ms;
+}
+.fade-in-start [data-fade="8"] {
+  transition-delay: 800ms;
 }

@@ -13,9 +13,7 @@ const LinkSos: React.FC<LinkType> = ({ href, children, className }) => {
           items-center 
           gap-1 
           text-neutral-600 
-          hover:text-gray-900 
-          text-base 
-          font-semibold 
+          hover:text-gray-900  
           px-1 
           ${className}
         `}

@@ -3,9 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Container from "../../Container";
 import { navLinks } from "@/constants";
-// import UnstyledLink from "@/components/links/UnstyledLink";
 import { usePathname } from "next/navigation";
-import Underline from "@/components/links/Underline";
 import UnstyledLink from "@/components/links/UnstyledLink";
 
 const Navbar = () => {
@@ -24,14 +22,31 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className={`sticky top-0 z-50 transition-shadow bg-white ${!onTop && "shadow-md"}`}>
+    <header
+      className={`
+        sticky 
+        top-0 
+        z-50 
+        transition-shadow 
+        bg-white 
+        ${!onTop && "shadow-md"}
+      `}
+    >
       <Container>
         <nav className="py-4">
-          <ul className="flex justify-start items-center space-x-5">
+          <ul className="flex-start space-x-5">
             {navLinks.map(({ href, label }) => (
               <li key={`${href}${label}`}>
                 <UnstyledLink href={href}>
-                  <span className={`pb-[2px] font-medium ${href === param ? "underline-active link-underline-black" : "link-underline link-underline-black text-slate-950"}`}>{label}</span>
+                  <span
+                    className={`
+                      pb-[2px] 
+                      font-medium 
+                      ${href === param ? "underline-active link-underline-black" : "link-underline link-underline-black text-slate-950"}
+                    `}
+                  >
+                    {label}
+                  </span>
                 </UnstyledLink>
               </li>
             ))}

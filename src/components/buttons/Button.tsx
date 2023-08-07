@@ -1,8 +1,10 @@
+"use client";
+
 import React from "react";
 import { IconType } from "react-icons";
 
 interface Props {
-  label: string;
+  label?: string;
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
   disabled?: boolean;
   small?: Boolean;

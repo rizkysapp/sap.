@@ -10,7 +10,6 @@ export const PreloadProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsPreloaded(true);
-      // console.log({ isPreloaded });
     }, 100);
   }, []);
 

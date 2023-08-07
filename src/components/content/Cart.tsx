@@ -2,13 +2,15 @@ import React from "react";
 
 interface Props {
   children: React.ReactNode;
+  className?: String;
 }
 
-const Cart: React.FC<Props> = ({ children }) => {
+const Cart: React.FC<Props> = ({ children, className }) => {
   return (
     <>
       <div
-        className="
+        className={`
+        w-full
         h-full 
         overflow-hidden
         border-2 
@@ -18,7 +20,8 @@ const Cart: React.FC<Props> = ({ children }) => {
         relative 
         shadow-dark
         transition
-      "
+        ${className}
+      `}
       >
         {children}
       </div>

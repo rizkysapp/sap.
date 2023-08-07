@@ -7,6 +7,6 @@ export interface BlogProps {
   date?: String;
   look?: String;
   srcImage?: String;
-  small: Boolean;
+  small?: Boolean;
   // icon: IconType;
 }
