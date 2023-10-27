@@ -1,6 +1,6 @@
 import React from "react";
 import * as HoverCard from "@radix-ui/react-hover-card";
-import LinkSos from "./links/LinkSos";
+import { IconType } from "react-icons/lib";
 
 interface Props {
   desc: String;

@@ -17,6 +17,10 @@ const Library = () => {
             <section className="mb-5">
               <TitlePage title="Projects" desc="Lorem ipsum dolor sit amet consectetur adipisicing." />
             </section>
+            <section>
+              <div>{/* TODO: Add projects */}</div>
+              <div className="border"></div>
+            </section>
           </main>
         </Container>
       </Layout>

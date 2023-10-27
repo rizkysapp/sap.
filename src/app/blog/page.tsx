@@ -4,14 +4,16 @@ import Container from "@/components/Container";
 import { useLouded } from "@/hooks/useLouded";
 import Input from "@/components/form/Input";
 import Layout from "@/components/layouts/Layout";
-import React from "react";
+import React, { useEffect } from "react";
 import Tag from "@/components/content/Tag";
 import TitlePage from "@/components/content/TitlePage";
 import { BiSearch } from "react-icons/bi";
 import BlogCard from "@/components/content/blog/BlogCard";
-import ListBox from "@/components/content/DropdownMenu";
 import UnstyledLink from "@/components/links/UnstyledLink";
-import Dropdown from "@/components/content/DropdownMenu";
+import SelectTes from "@/components/selects/SelectTes";
+import { HiCalendar } from "react-icons/hi";
+import { HiEye } from "react-icons/hi2";
+import { getFromSessionStorage } from "@/lib/helper.client";
 
 const Blog = () => {
   const isLouded = useLouded();
@@ -19,6 +21,25 @@ const Blog = () => {
   const search = (q: any) => {
     console.log({ input: q });
   };
+
+  // const items: Array<item> = [
+  //   {
+  //     id: "date",
+  //     name: "Sort by date",
+  //     icon: HiCalendar,
+  //   },
+  //   {
+  //     id: "views",
+  //     name: "Sort by views",
+  //     icon: HiEye,
+  //   },
+  // ];
+
+  // const [sortOrder, setSortOrder] = React.useState<item>(() => items[Number(getFromSessionStorage("blog-sort")) || 0]);
+
+  // useEffect(() => {
+  //   console.log({ tes: sortOrder.id });
+  // }, [sortOrder]);
 
   return (
     <div>
@@ -73,9 +94,10 @@ const Blog = () => {
                   testing
                 </UnstyledLink>
                 <div>
-                  <Dropdown />
+                  <SelectTes />
                 </div>
               </div>
+              {/* <div className={`${sortOrder.id == "date" ? "block" : "hidden text-4xl"}`}>hihahhahahaha</div> */}
               <div className="border-b-2 border-gray-900 my-5"></div>
             </section>
             <section>
@@ -87,96 +109,7 @@ const Blog = () => {
                   lg:grid-cols-3
                 "
               >
-                <BlogCard
-                  small
-                  title="testong sduys bdsj"
-                  desc="vusdf vsdhj furbe vfhsj dfbysgfyurw jwefdbewufbw fwe fwfwbfwfbw"
-                  dateUp="20 min read"
-                  date="september 21, 2020"
-                  look="4.543"
-                  srcImage={"/test.jpg"}
-                />
-                <BlogCard
-                  small
-                  title="testong sduys bdsj"
-                  desc="vusdf vsdhj furbe vfhsj dfbysgfyurw jwefdbewufbw fwe fwfwbfwfbw"
-                  dateUp="20 min read"
-                  date="september 21, 2020"
-                  look="4.543"
-                  srcImage={"/test.jpg"}
-                />
-                <BlogCard
-                  small
-                  title="testong sduys bdsj"
-                  desc="vusdf vsdhj furbe vfhsj dfbysgfyurw jwefdbewufbw fwe fwfwbfwfbw"
-                  dateUp="20 min read"
-                  date="september 21, 2020"
-                  look="4.543"
-                  srcImage={"/test.jpg"}
-                />
-                <BlogCard
-                  small
-                  title="testong sduys bdsj"
-                  desc="vusdf vsdhj furbe vfhsj dfbysgfyurw jwefdbewufbw fwe fwfwbfwfbw"
-                  dateUp="20 min read"
-                  date="september 21, 2020"
-                  look="4.543"
-                  srcImage={"/test.jpg"}
-                />
-                <BlogCard
-                  small
-                  title="testong sduys bdsj"
-                  desc="vusdf vsdhj furbe vfhsj dfbysgfyurw jwefdbewufbw fwe fwfwbfwfbw"
-                  dateUp="20 min read"
-                  date="september 21, 2020"
-                  look="4.543"
-                  srcImage={"/test.jpg"}
-                />
-                <BlogCard
-                  small
-                  title="testong sduys bdsj"
-                  desc="vusdf vsdhj furbe vfhsj dfbysgfyurw jwefdbewufbw fwe fwfwbfwfbw"
-                  dateUp="20 min read"
-                  date="september 21, 2020"
-                  look="4.543"
-                  srcImage={"/test.jpg"}
-                />
-                <BlogCard
-                  small
-                  title="testong sduys bdsj"
-                  desc="vusdf vsdhj furbe vfhsj dfbysgfyurw jwefdbewufbw fwe fwfwbfwfbw"
-                  dateUp="20 min read"
-                  date="september 21, 2020"
-                  look="4.543"
-                  srcImage={"/test.jpg"}
-                />
-                <BlogCard
-                  small
-                  title="testong sduys bdsj"
-                  desc="vusdf vsdhj furbe vfhsj dfbysgfyurw jwefdbewufbw fwe fwfwbfwfbw"
-                  dateUp="20 min read"
-                  date="september 21, 2020"
-                  look="4.543"
-                  srcImage={"/test.jpg"}
-                />
-                <BlogCard
-                  small
-                  title="testong sduys bdsj"
-                  desc="vusdf vsdhj furbe vfhsj dfbysgfyurw jwefdbewufbw fwe fwfwbfwfbw"
-                  dateUp="20 min read"
-                  date="september 21, 2020"
-                  look="4.543"
-                  srcImage={"/test.jpg"}
-                />
-                <BlogCard
-                  small
-                  title="testong sduys bdsj"
-                  desc="vusdf vsdhj furbe vfhsj dfbysgfyurw jwefdbewufbw fwe fwfwbfwfbw"
-                  dateUp="20 min read"
-                  date="september 21, 2020"
-                  look="4.543"
-                  srcImage={"/test.jpg"}
-                />
+                <BlogCard small title="" desc="" dateUp="" date="" look="" srcImage={"/test.jpg"} />
               </div>
             </section>
           </main>

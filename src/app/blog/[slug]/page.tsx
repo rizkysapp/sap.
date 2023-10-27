@@ -21,7 +21,20 @@ const Page = ({ params, searchParams }: any) => {
           <main className="py-8">
             <section>
               <div className="w-full h-72">
-                <Image src={"/test.jpg"} alt="blogProfil" width={100} height={100} className="w-full object-cover h-full overflow-hidden shadow-lg rounded" />
+                <Image
+                  src={"/test.jpg"}
+                  alt="blogProfil"
+                  width={100}
+                  height={100}
+                  className="
+                    w-full 
+                    object-cover 
+                    h-full 
+                    overflow-hidden 
+                    shadow-lg 
+                    rounded
+                  "
+                />
               </div>
               <div className="mt-4 flex">
                 <h1 className="page-h1">Ini title blog perslug {params.slug}</h1>
@@ -60,15 +73,6 @@ const Page = ({ params, searchParams }: any) => {
                 </div>
               </div>
               <div className="border flex-col justify-start items-center space-y-4 p-4 absolute top-0 right-24 bg-white">
-                <LinkSos href="gd">testing 1</LinkSos>
-                <LinkSos href="gd">testing 1</LinkSos>
-                <LinkSos href="gd">testing 1</LinkSos>
-                <LinkSos href="gd">testing 1</LinkSos>
-                <LinkSos href="gd">testing 1</LinkSos>
-                <LinkSos href="gd">testing 1</LinkSos>
-                <LinkSos href="gd">testing 1</LinkSos>
-                <LinkSos href="gd">testing 1</LinkSos>
-                <LinkSos href="gd">testing 1</LinkSos>
                 <LinkSos href="gd">testing 1</LinkSos>
               </div>
             </section>

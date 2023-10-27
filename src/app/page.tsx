@@ -12,7 +12,7 @@ import { BsGithub, BsInstagram } from "react-icons/bs";
 import { BiDownArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import BlogCard from "@/components/content/blog/BlogCard";
 import UnstyledLink from "@/components/links/UnstyledLink";
-import Cart from "@/components/content/Cart";
+import Cart from "@/components/content/Card";
 import Image from "next/image";
 import { InView } from "react-intersection-observer";
 import { useRouter } from "next/navigation";
@@ -153,7 +153,7 @@ const Home = () => {
                   "
                 >
                   <LinkSos
-                    href={"git"}
+                    href={"https://github.com/rizkysapp"}
                     className="
                     text-base 
                     font-semibold
@@ -217,12 +217,12 @@ const Home = () => {
                 >
                   <article
                     className="
-                  flex-col 
-                  justify-center 
-                  items-center 
-                  py-10 
-                  px-24
-                "
+                      flex-col 
+                      justify-center 
+                      items-center 
+                      py-10 
+                      px-24
+                    "
                   >
                     <div>
                       <h1
@@ -306,73 +306,20 @@ const Home = () => {
                           lg:grid-cols-3
                         "
                       >
-                        <BlogCard
-                          small
-                          title="testong sduys bdsj"
-                          desc="vusdf vsdhj furbe vfhsj dfbysgfyurw jwefdbewufbw fwe fwfwbfwfbw"
-                          dateUp="20 min read"
-                          date="september 21, 2020"
-                          look="4.543"
-                          srcImage={"/test.jpg"}
-                        />
-                        <BlogCard
-                          small
-                          title="testong sduys bdsj"
-                          desc="vusdf vsdhj furbe vfhsj dfbysgfyurw jwefdbewufbw fwe fwfwbfwfbw"
-                          dateUp="20 min read"
-                          date="september 21, 2020"
-                          look="4.543"
-                          srcImage={"/test.jpg"}
-                        />
-                        <BlogCard
-                          small
-                          title="testong sduys bdsj"
-                          desc="vusdf vsdhj furbe vfhsj dfbysgfyurw jwefdbewufbw fwe fwfwbfwfbw"
-                          dateUp="20 min read"
-                          date="september 21, 2020"
-                          look="4.543"
-                          srcImage={"/test.jpg"}
-                        />
-                        <BlogCard
-                          small
-                          title="testong sduys bdsj"
-                          desc="vusdf vsdhj furbe vfhsj dfbysgfyurw jwefdbewufbw fwe fwfwbfwfbw"
-                          dateUp="20 min read"
-                          date="september 21, 2020"
-                          look="4.543"
-                          srcImage={"/test.jpg"}
-                        />
-                        <BlogCard
-                          small
-                          title="testong sduys bdsj"
-                          desc="vusdf vsdhj furbe vfhsj dfbysgfyurw jwefdbewufbw fwe fwfwbfwfbw"
-                          dateUp="20 min read"
-                          date="september 21, 2020"
-                          look="4.543"
-                          srcImage={"/test.jpg"}
-                        />
-                        <BlogCard
-                          small
-                          title="testong sduys bdsj"
-                          desc="vusdf vsdhj furbe vfhsj dfbysgfyurw jwefdbewufbw fwe fwfwbfwfbw"
-                          dateUp="20 min read"
-                          date="september 21, 2020"
-                          look="4.543"
-                          srcImage={"/test.jpg"}
-                        />
+                        <BlogCard small title="" desc="" dateUp="" date="" look="" srcImage={"/test.jpg"} />
                       </div>
                       <div className="mt-10">
                         <UnstyledLink
-                          href={"/blogCard"}
+                          href={"/blog"}
                           className="
-                      small-btn 
-                      px-2 
-                      py-1 
-                      text-base 
-                      font-medium 
-                      shadow-lg 
-                      rounded
-                    "
+                            small-btn 
+                            px-2 
+                            py-1 
+                            text-base 
+                            font-medium 
+                            shadow-lg 
+                            rounded
+                          "
                         >
                           See more
                         </UnstyledLink>
@@ -418,51 +365,11 @@ const Home = () => {
                         "
                       >
                         <Cart className="flex-col justify-start p-2">
-                          <h1 className="text-lg font-semibold">title prod</h1>
+                          <h1 className="text-lg font-semibold"></h1>
                           <div className="w-full py-2">
                             <Image className="w-full shadow-md" height={100} width={100} src={"/test.jpg"} alt="hi" />
                           </div>
-                          <p className=" text-sm font-light h-10 overflow-hidden">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima reiciendis, asperiores</p>
-                          <div
-                            className="
-                        flex 
-                        mt-2 
-                        items-center 
-                        justify-start
-                      "
-                          >
-                            <Underline href="/test">
-                              <span>Lee more</span>
-                              <BiRightArrowAlt />
-                            </Underline>
-                          </div>
-                        </Cart>
-                        <Cart className="flex-col justify-start p-2">
-                          <h1 className="text-lg font-semibold">title prod</h1>
-                          <div className="w-full py-2">
-                            <Image className="w-full shadow-md" height={100} width={100} src={"/test.jpg"} alt="hi" />
-                          </div>
-                          <p className=" text-sm font-light h-10 overflow-hidden">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima reiciendis, asperiores</p>
-                          <div
-                            className="
-                        flex 
-                        mt-2 
-                        items-center 
-                        justify-start
-                      "
-                          >
-                            <Underline href="/test">
-                              <span>Lee more</span>
-                              <BiRightArrowAlt />
-                            </Underline>
-                          </div>
-                        </Cart>
-                        <Cart className="flex-col justify-start p-2">
-                          <h1 className="text-lg font-semibold">title prod</h1>
-                          <div className="w-full py-2">
-                            <Image className="w-full shadow-md" height={100} width={100} src={"/test.jpg"} alt="hi" />
-                          </div>
-                          <p className=" text-sm font-light h-10 overflow-hidden">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima reiciendis, asperiores</p>
+                          <p className=" text-sm font-light h-10 overflow-hidden"></p>
                           <div
                             className="
                         flex 
@@ -480,7 +387,7 @@ const Home = () => {
                       </ul>
                       <div className="mt-10">
                         <UnstyledLink
-                          href={"/project"}
+                          href={"/projects"}
                           className="
                       small-btn 
                       px-2 

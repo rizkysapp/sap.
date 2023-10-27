@@ -2,7 +2,7 @@ import Image from "next/image";
 import { BsEye } from "react-icons/bs";
 import { BiTimeFive, BiRightArrowAlt } from "react-icons/bi";
 import Underline from "../../links/Underline";
-import Cart from "../Cart";
+import Cart from "../Card";
 import { BlogProps } from "@/types/Blog";
 import React from "react";
 
