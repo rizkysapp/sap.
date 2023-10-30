@@ -10,10 +10,6 @@ import TitlePage from "@/components/content/TitlePage";
 import { BiSearch } from "react-icons/bi";
 import BlogCard from "@/components/content/blog/BlogCard";
 import UnstyledLink from "@/components/links/UnstyledLink";
-import SelectTes from "@/components/selects/SelectTes";
-import { HiCalendar } from "react-icons/hi";
-import { HiEye } from "react-icons/hi2";
-import { getFromSessionStorage } from "@/lib/helper.client";
 
 const Blog = () => {
   const isLouded = useLouded();
@@ -93,9 +89,9 @@ const Blog = () => {
                 >
                   testing
                 </UnstyledLink>
-                <div>
+                {/* <div>
                   <SelectTes />
-                </div>
+                </div> */}
               </div>
               {/* <div className={`${sortOrder.id == "date" ? "block" : "hidden text-4xl"}`}>hihahhahahaha</div> */}
               <div className="border-b-2 border-gray-900 my-5"></div>
