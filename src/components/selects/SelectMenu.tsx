@@ -38,7 +38,7 @@ const SelectMenu: React.FC<Props> = ({ items, value, onChange, name, defaultValu
 
   useEffect(() => {
     if (defaultValue) {
-      console.log(items, "selectChoices");
+      console.log(items, "items");
       const newValue = items.find((i) => i.id === defaultValue);
       console.log(defaultValue, "defaultValue");
       if (!newValue) {

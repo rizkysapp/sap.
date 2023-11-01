@@ -10,6 +10,10 @@ import TitlePage from "@/components/content/TitlePage";
 import { BiSearch } from "react-icons/bi";
 import BlogCard from "@/components/content/blog/BlogCard";
 import UnstyledLink from "@/components/links/UnstyledLink";
+import SelectMenu from "@/components/selects/SelectMenu";
+import { item } from "@/components/selects/SelectMenu";
+import { HiCalendar } from "react-icons/hi";
+import { HiEye } from "react-icons/hi2";
 
 const Blog = () => {
   const isLouded = useLouded();
@@ -18,24 +22,18 @@ const Blog = () => {
     console.log({ input: q });
   };
 
-  // const items: Array<item> = [
-  //   {
-  //     id: "date",
-  //     name: "Sort by date",
-  //     icon: HiCalendar,
-  //   },
-  //   {
-  //     id: "views",
-  //     name: "Sort by views",
-  //     icon: HiEye,
-  //   },
-  // ];
-
-  // const [sortOrder, setSortOrder] = React.useState<item>(() => items[Number(getFromSessionStorage("blog-sort")) || 0]);
-
-  // useEffect(() => {
-  //   console.log({ tes: sortOrder.id });
-  // }, [sortOrder]);
+  const items: Array<item> = [
+    {
+      id: "date",
+      name: "Sort by date",
+      icon: HiCalendar,
+    },
+    {
+      id: "views",
+      name: "Sort by views",
+      icon: HiEye,
+    },
+  ];
 
   return (
     <div>
@@ -89,11 +87,10 @@ const Blog = () => {
                 >
                   testing
                 </UnstyledLink>
-                {/* <div>
-                  <SelectTes />
-                </div> */}
+                <div>
+                  <SelectMenu items={items} value={} onChange={} name={} defaultValue={} />
+                </div>
               </div>
-              {/* <div className={`${sortOrder.id == "date" ? "block" : "hidden text-4xl"}`}>hihahhahahaha</div> */}
               <div className="border-b-2 border-gray-900 my-5"></div>
             </section>
             <section>
